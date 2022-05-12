@@ -1,0 +1,76 @@
+$f-family: 'Roboto', sans-serif;
+
+$color_white: #FFFFFF;
+$color_black: #000000;
+$color_blue-dark: #35495e;
+$color_blue-light: rgba(53, 73, 94, 0.2);
+$color_green_dark: #41b883;
+$color_green-light: rgba(65, 184, 131, 0.2);
+$color_orange-dark: rgb(243, 101, 6);
+$color_orange-light: rgb(243, 101, 6, 0.2);
+
+$bg_gray: #F2F3F5;
+//$border_gray: #E8E8E9;
+
+$pad-all: 24px;
+
+%button-color {
+  background-color: $color_green_dark;
+  color: $color_blue-dark;
+}
+%button-border {
+  background-color: transparent;
+  color: $color_blue-dark;
+  border: 1px solid $color_blue-dark;
+  box-shadow: none;
+}
+%button-dashed {
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px dashed $color_blue-dark;
+  box-shadow: none;
+}
+%button-not-color {
+  height: auto;
+  min-width: 0;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+%button-color__hover {
+  color: $color_white;
+}
+%button-border__hover {
+  background-color: $color_green_dark;
+  border-color: $color_green_dark;
+  color: $color_white;
+}
+
+@mixin status ($bg, $col){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  border-radius: 10px;
+  font: normal normal 14px/100% $f-family;
+  background-color: $bg;
+  color: $col;
+}
+
+.content-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: $pad-all;
+  min-height: 100%;
+}
+
+.open {
+  @include status($color_green-light, $color_green_dark);
+}
+.progress {
+  @include status($color_blue-light, $color_blue-dark);
+}
+.done {
+  @include status($color_orange-light, $color_orange-dark);
+}
