@@ -22,7 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-```
 
 ### More Information you read in .pptx file
 Test Project Info.pptx
